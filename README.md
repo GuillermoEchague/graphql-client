@@ -1,70 +1,90 @@
-# Getting Started with Create React App
+# Cliente Proyecto GraphQL
+Desarrollo del cliente del proyecto de GraphQL - Escalab
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Dependencias del proyecto
 
-## Available Scripts
+```bash
+# Apollo/client
+yarn add @apollo/client@3.0.0-beta.43
+# Apollo/react-hooks
+yarn add @apollo/react-hooks@3.1.4
+# Apollo-boost
+yarn add apollo-boost@0.4.7
+# Graphql
+yarn add graphql@15.0.0
+```
 
-In the project directory, you can run:
+## Dependencias en producción del proyecto (Code Splitting)
+```bash
+yarn add @babel/core@7.12.17 -D
+yarn add @babel/preset-env@7.12.17 -D
+yarn add @babel/preset-react@7.12.13 -D
+yarn add babel-loader@8.2.2 -D
+yarn add @svgr/webpack@5.5.0 -D
+yarn add copy-webpack-plugin@7.0.0 -D
+yarn add core-js@3.9.0 -D
+yarn add css-loader@5.0.2 -D
+yarn add favicons-webpack-plugin@5.0.1 -D
+yarn add file-loader@6.2.0 -D
+yarn add html-webpack-plugin@5.2.0 -D
+yarn add image-webpack-loader@7.0.1 -D
+yarn add prettier@1.19.1 -D
+yarn add regenerator-runtime@0.13.7 -D
+yarn add sass-loader@11.0.1 -D
+yarn add style-loader@2.0.0 -D
+yarn add webpack@5.23.0 -D
+yarn add webpack-cli@4.5.0 -D
+yarn add webpack-dev-server@3.11.2 -D
+```
 
-### `yarn start`
+## Proyecto en producción en Vercel
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```bash
+# Instalar CLI de vercel en forma Global (Una sola vez)
+npm i -g vercel
+# Configuraciones para el deploy
+vercel
+# Proyecto a Producción
+vercel --prod
+# Inspect
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+# Production 
 
-### `yarn test`
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Ejecución de proyecto
+```bash
+# Modo Development
+yarn start
+# Modo Production
+yarn build
+# Servidor de prueba webpack
+yarn run dev-server
+```
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Codigos GIT
+```bash
+# Revisar logs
+git log --pretty=oneline
+#Cargar cambios y versiones
+git branch -M main
+git push -u origin main
+# Generar Tags
+           (Version) 
+git tag -a V1.0.0 -m "Mensaje"
+git push --tags
+#branches (Ramas)
+git add .
+git checkout -b room
+git commit -m "Agregado de dependencias"
+git push origin room
+#Unir Ramas a main
+git checkout main
+git merge <Nombre Rama> -m "Mensaje rama"
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Demostración del proyecto
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Error
+![](img/error.png)
