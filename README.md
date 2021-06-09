@@ -4,14 +4,22 @@ Desarrollo del cliente del proyecto de GraphQL - Escalab
 ## Dependencias del proyecto
 
 ```bash
-# Apollo/client
-yarn add @apollo/client@3.0.0-beta.43
 # Apollo/react-hooks
 yarn add @apollo/react-hooks@3.1.4
-# Apollo-boost
+# Apollo-boost contiene Apollo/client
 yarn add apollo-boost@0.4.7
 # Graphql
 yarn add graphql@15.0.0
+# React router dom
+yarn add react-router-dom@5.1.2
+```
+
+## Dependencias con Firebase
+```bash
+# Firebase
+yarn add firebase@7.14.0
+# React toastify
+yarn add react-toastify@5.5.0
 ```
 
 ## Dependencias en producción del proyecto (Code Splitting)

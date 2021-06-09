@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import ApolloClient from 'apollo-boost';
+import { Switch, Route } from 'react-router-dom';
+import { ApolloProvider } from '@apollo/react-hooks';
+import { ToastContainer } from 'react-toastify';
+// import components
+import Nav from './components/Nav';
+import Home from './pages/Home';
+import Register from './pages/auth/Register';
+import Login from './pages/auth/Login';
+//import CompleteRegistration from './pages/auth/CompleteRegistration;
 
-function App() {
+const client = new ApolloClient({
+  uri: process.env.REACT_APP_GRAPHQL_ENDPOINT
+});
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ApolloProvider client={client}>
+        <Nav />
+        <ToastContainer />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/register" component={Register} />
+          <Route exact path="/login" component={Login} />
+        </Switch>
+    </ApolloProvider>
   );
-}
+};
 
 export default App;
