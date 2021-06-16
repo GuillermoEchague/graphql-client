@@ -1,6 +1,8 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import { gql } from 'apollo-boost';
 import { useQuery, useLazyQuery } from '@apollo/react-hooks';
+import { AuthContext } from '../context/authContext';
+import { useHistory } from 'react-router-dom'; 
 
 const GET_ALL_POST = gql`
     {
@@ -16,6 +18,17 @@ const GET_ALL_POST = gql`
 const Home = () => {
    const { data, loading } = useQuery(GET_ALL_POST);
    const [ fetchPosts, {data: posts} ] = useLazyQuery(GET_ALL_POST); 
+   // access context
+   const { state } = useContext(AuthContext);
+   // react router
+   let history = useHistory();
+
+   /*const updateUserName = () => {
+       dispatch({
+           type: 'LOGGED_IN_USER',
+           payload:'Guillermo Echague'
+       });
+   };*/
 
    if (loading) return <p className="p-5">Loading...</p>;
    return (
@@ -41,6 +54,10 @@ const Home = () => {
         </div>
         <hr/>
         {JSON.stringify(posts)}
+        <hr />
+        {JSON.stringify(state.user)}
+        <hr />
+        {JSON.stringify(history)}
        </div>
    );
 }

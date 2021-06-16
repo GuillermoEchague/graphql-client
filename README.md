@@ -12,6 +12,10 @@ yarn add apollo-boost@0.4.7
 yarn add graphql@15.0.0
 # React router dom
 yarn add react-router-dom@5.1.2
+# Trabajar con imagenes
+yarn add omit-deep
+yarn add react-image-file-resizer
+yarn add axios
 ```
 
 ## Dependencias con Firebase
