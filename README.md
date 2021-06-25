@@ -98,5 +98,26 @@ git merge <Nombre Rama> -m "Mensaje rama"
 
 ## Demostración del proyecto
 
-### Error
-![](img/error.png)
+### Navbar
+![](img/navbar.png)
+
+### User
+![](img/user.png)
+
+### Login
+![](img/login.png)
+
+### Register
+![](img/register.png)
+
+### Forgot Password
+![](img/forgot.png)
+
+### Profile
+![](img/profile.png)
+
+### Password
+![](img/password.png)
+
+### Post
+![](img/post.png)
