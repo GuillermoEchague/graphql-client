@@ -1,9 +1,15 @@
 # Cliente Proyecto GraphQL
 Desarrollo del cliente del proyecto de GraphQL - Escalab
 
+## Creación del proyecto React
+```bash
+npx creact-react-app client
+```
+
 ## Dependencias del proyecto
 
 ```bash
+yarn add @apollo/client@3.0.0-beta.43
 # Apollo/react-hooks
 yarn add @apollo/react-hooks@3.1.4
 # Apollo-boost contiene Apollo/client
